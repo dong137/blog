@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "621626",
+      "name": "电话",
+      "font_class": "3",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "3834478",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7408317",
+      "name": "二维码",
+      "font_class": "erweima",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情页</title>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="css/typo.css">
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <link rel="stylesheet" type="text/css" href="css/tocbot.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padding-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!-- 中间内容 -->
+<div class="m-padding-tb-big m-container-small">
+    <div class="ui container">
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="https://unsplash.it/100/100?image=1004" class="ui avatar image">
+                    <div class="content"><a class="header">吴家栋</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i> 2020-7-31
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i> 2020
+                </div>
+            </div>
+        </div>
+        <div class="ui attached segment">
+            <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui fluid rounded image">
+        </div>
+
+        <div class="ui attached padded segment">
+            <!-- 内容 -->
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">原创</div>
+            </div>
+
+            <h2 class="ui center aligned header">关于刻意练习的清单</h2>
+            <pre><code class="language-css">p{color:red;}</code></pre>
+            <div id="content" class=" typo js-toc-content typo-selection m-paddding-lr m-padding-tb-large">
+
+                <ol id="table">
+                    <li><a href="#section1">关于 <i class="serif">Typo.css</i></a></li>
+                    <li><a href="#section2">排版实例</a>
+                        <ul>
+                            <li><a href="#section2-1">例1：论语学而篇第一</a></li>
+                            <li><a href="#section2-2">例2：英文排版</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section3">附录</a>
+                        <ul>
+                            <li><a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a></li>
+                            <li><a href="#appendix2">开源许可</a></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
+
+                <p><i class="serif">Typo.css</i> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
+                <h4>现状和如何去做：</h4>
+
+                <p class="typo-first">排版是一个麻烦的问题 <sup><a href="#appendix1">#
+                    附录一</a></sup>，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS
+                    中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的
+                    Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。<i class="serif">Typo.css</i>
+                    要做的就是解决中文排版的问题。</p>
+
+                <p><strong><i class="serif">Typo.css</i> 测试于如下平台：</strong></p>
+                <table summary="Typo.css 的测试平台列表">
+                    <thead>
+                    <tr>
+                        <th>OS/浏览器</th>
+                        <th>Firefox</th>
+                        <th>Chrome</th>
+                        <th>Safari</th>
+                        <th>Opera</th>
+                        <th>IE9</th>
+                        <th>IE8</th>
+                        <th>IE7</th>
+                        <th>IE6</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>OS X</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Win 7</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Win XP</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>Ubuntu</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h4>中文排版的重点和难点</h4>
+
+                <p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>（例：这里<em
+                        class="typo-em">强调一下</em>）。在 HTML4 中，专名号标签（<code>&lt;u&gt;</code>）已经被放弃，而
+                    HTML5 被<a href="//html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i>
+                    也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
+                <ol>
+                    <li>语义：语义对应的用法和样式是否与中文排版一致</li>
+                    <li>表现：在各浏览器中的字体、大小和缩放是否如排版预期</li>
+                </ol>
+                <p>对于这些，<i class="serif">Typo.css</i> 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
+                <blockquote>
+                    <b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a>
+                </blockquote>
+
+                <p>目前已有像百姓网等全面使用 <i class="serif">Typo.css</i> 的项目，测试平台的覆盖，特别是在<abbr
+                        title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 <i
+                        class="serif">Typo.css</i>
+                    的开发。加入方法：<a href="https://github.com/sofish/Typo.css">参与 <i class="serif">Typo.css</i>
+                        开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a
+                            href="https://github.com/sofish/Typo.css/issues">issues</a>，或给<abbr
+                            title="Sofish Lin, author of Typo.css" role="author">我</abbr>发<a
+                            href="mailto:sofish@icloud.com">邮件</a>。</p>
+
+
+                <h2 id="section2">二、排版实例：</h2>
+
+                <p>提供2个排版实例，第一个中文实例来自于来自于<cite
+                        class="typo-unique">张燕婴</cite>的《论语》，由于古文排版涉及到的元素比较多，所以采用《论语》中《学而》的第一篇作为排版实例介绍；第2个来自到经典的
+                    Lorem Ipsum，并加入了一些代码和列表等比较具有代表性的排版元素。</p>
+
+                <h3 id="section2-1">例1：论语学而篇第一</h3>
+
+                <p>
+                    <small><b>作者：</b><abbr title="名丘，字仲尼">孔子</abbr>（
+                        <time>前551年9月28日－前479年4月11日</time>
+                        ）
+                    </small>
+                </p>
+
+            </div>
+
+            <div class="m-paddding-lr-response">
+                <div class="ui teal left pointing basic label">方法论</div>
+            </div>
+
+            <!-- 赞赏 -->
+            <div class="ui center aligned basic segment">
+                <div id="paybutton" class="ui orange basic circle button">赞赏</div>
+            </div>
+            <div class="ui pay flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit!important;">
+                        <div class="image">
+                            <img src="imgs/5.jpg" class="ui rounded bordered image" style="width: 120px;">
+                            <div>支付宝</div>
+                        </div>
+                        <div class="image">
+                            <img src="imgs/5.jpg" class="ui rounded bordered image" style="width: 120px;">
+                            <div>微信</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui attached positive message">
+            <!-- 博客信息 -->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ul class="ui list">
+                        <div class="item">作者：吴家栋</div>
+                        <div class="item">发表时间</div>
+                        <div class="item">版权声明</div>
+                        <div class="item">公众号转载</div>
+                    </ul>
+                </div>
+                <div class="five wide column">
+                    <img src="imgs/5.jpg" class="ui right floated rounded bordered image" style="width: 110px;">
+                </div>
+
+                <!-- 留言区域 -->
+                <div id="comment-container" class="ui bottom attached segment">
+                    <!-- bottom底边变圆角 -->
+                    <div class="ui teal segment">
+                        <div class="ui comments">
+                            <h3 class="ui dividing header">Comments</h3>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/800/450?image=1005">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Matt</a>
+                                    <div class="metadata">
+                                        <span class="date">Today at 5:42PM</span>
+                                    </div>
+                                    <div class="text">
+                                        How artistic!
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/800/450?image=1005">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Elliot Fu</a>
+                                    <div class="metadata">
+                                        <span class="date">Yesterday at 12:30AM</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>This has been very useful for my research. Thanks as well!</p>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comments">
+                                    <div class="comment">
+                                        <a class="avatar">
+                                            <img src="https://unsplash.it/800/450?image=1005">
+                                        </a>
+                                        <div class="content">
+                                            <a class="author">Jenny Hess</a>
+                                            <div class="metadata">
+                                                <span class="date">Just now</span>
+                                            </div>
+                                            <div class="text">
+                                                Elliot you are always so right :)
+                                            </div>
+                                            <div class="actions">
+                                                <a class="reply">Reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/800/450?image=1005">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Joe Henderson</a>
+                                    <div class="metadata">
+                                        <span class="date">5 days ago</span>
+                                    </div>
+                                    <div class="text">
+                                        Dude, this is awesome. Thanks so much
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 姓名邮箱输入框 -->
+                    <div class="ui form">
+                        <div class="field">
+                            <textarea name="content" placeholder="请输入评论信息"></textarea>
+                        </div>
+
+                        <div class="fields">
+                            <div class="field m-mobile-wide m-margin-bottom-small">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" name="nickname" placeholder="姓名">
+                                </div>
+                            </div>
+                            <div class="field m-mobile-wide m-margin-bottom-small">
+                                <div class="ui left icon input">
+                                    <i class="mail icon"></i>
+                                    <input type="text" name="email" placeholder="邮箱">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <button class="ui teal button m-mobile-wide m-margin-bottom-small"><i
+                                        class="edit icon"></i>发布
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 导航条 -->
+<div class="m-fixed m-right-bottom m-padding">
+    <div class="ui vertical icon buttons">
+        <button type="button" class="ui toc teal button">目录</button>
+        <a href="#comment-container" class="ui teal button">留言</a>
+        <button class="ui weChat icon button"><i class="weixin icon"></i></button>
+        <a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
+    </div>
+</div>
+
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+    <ol class="js-toc">
+    </ol>
+</div>
+
+<div id="qrcode" class="ui weChatp flowing popup transition hidden" style="width: 130px;">
+    <!-- <img src="imgs/5.jpg" alt="" class="ui rounded image" style="width: 120px;"> -->
+</div>
+
+<!-- 底部内容 -->
+<footer class="ui inverted vertical segment m-padding-tb-massive">
+    <div class="ui container center aligned">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <img src="imgs/5.jpg" class="ui rounded image" style="width: 110px;">
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-mini">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">关于刻意练习的清单</a>
+                    <a href="#" class="item">失败要趁早</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-mini">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:13758499033@163.com</a>
+                    <a href="#" class="item">QQ:1282413382</a>
+                    <a href="#" class="item">电话:13758499033</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-mini">Wjd</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客,会定期分享自己的制作成果</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright 2019-2020</p>
+    </div>
+</footer>
+
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="semantic/semantic.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/tocbot.js"></script>
+<script src="js/qrcode.js"></script>
+
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+
+    });
+
+    //移动端响应式导航列表
+    $(".menu.toggle").click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    //点击按钮显示二维码
+    $('#paybutton').popup({
+        popup: $('.pay.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+    $('.toc.button').popup({
+        popup: $('.toc-container.popup'),
+        on: 'click',
+        position: 'left center'
+    });
+
+    $('.weChat').popup({
+        popup: $('.weChatp'),
+        on: 'hover',
+        position: 'left center'
+    })
+
+    var qrcode = new QRCode('qrcode', {
+        text: 'https://www.bilibili.com/video/BV1nE411r7TF?p=19',
+        width: 110,
+        height: 110,
+        colorDark: '#000000',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H
+    });
+</script>
+</body>
+
+</html>
